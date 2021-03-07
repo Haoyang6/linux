@@ -1,0 +1,181 @@
+
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#define EAT '1'
+#define SLEEP '2'
+#define HITDOUDOU '3'
+#define CRY '4'
+#define WITHDRAW '0'
+static int n=1,m=1,l=1,p=1;
+char getChoice();
+void eat();
+void sleep();
+void hitdoudou();
+void cry();
+
+int main()
+{
+
+    system("color F4");//������ɫ
+    int num;
+	int p_count=0;
+	char input;
+    for(num=0;num<=100;num++)
+	{
+		printf("\n\n\t\t\t\t�������Ϸ\n\n");
+		printf("\t\t\tϵͳ�����У����Ժ�");
+		for(int j=0;j<p_count;j++)
+		{
+			printf(".");
+		}
+		p_count++;
+		if(p_count==6)
+		{
+			p_count=0;
+		}
+		for(int i=0;i<100;i++){};
+		printf("\t\t\t%d%%",num);
+		system("cls");
+	}
+    system("color B8");//������ɫ
+
+        /*��ӭ���������*/
+        int i=0,j=0,k=0;//�Ͻ�����ѭ�����
+        for(i=0;i<60;i++)
+        {
+            printf("��");
+            for(j=0;j<1000;j++)
+                for(k=0;k<1000;k++);
+        }
+        printf("\n\n");
+        printf("***************************************************�Է�˯���򶹶�******************************************************");
+        printf("\n\n");
+    char str[] = "    �и�����ȥ�ϼ��ɷ�һȺ��졣���ʵ�һֻ��죺����ÿ�춼��ʲô�������˵�����Է� ˯�� �򶹶������������ʵ�2ֻ��죬��ֻ��컹��˵�����Է� ˯�� �򶹶����� ���ߴ�����������������죬�𰸶�һ����������һֱ����99ֻ��졣���ߵ���100ֻС����Ա�ʱ�������߹�ȥ��������ÿ�춼��Щʲô��������ֻС���ش𣺡��Է� ˯���������˾�������ʣ�������ô���򶹶�����С���Ʋ����ͣ����˼���һ��˵�����Ҿ��Ƕ�������������";
+    char tmp[3] = {0};
+    int  a = 0;
+
+    int  len = strlen(str);//��ⳤ��
+    for(a = 0; a < len; )
+    {
+	  memset(tmp,0,3);
+	  if(str[a] >= 0x80)
+          {
+	      strncpy(tmp,&(str[a]),2);//strncpy�������ڽ�ָ�����ȵ��ַ������Ƶ��ַ�������
+              a += 2;
+          }
+	  else
+          {
+              strncpy(tmp,&(str[a]),1);
+              a += 1;
+          }
+	  printf("%s",tmp);
+    }
+    printf("\n");
+        for(i=0;i<60;i++)
+        {
+            printf("��");
+            for(j=0;j<1000;j++)
+                for(k=0;k<1000;k++);
+        }
+        system("color ED");//������ɫ
+    char cChioce;
+    while(1)
+    {
+        cChioce = getChoice();
+        if (cChioce==EAT)
+            eat();
+        else if (cChioce==SLEEP)
+            sleep();
+        else if (cChioce==HITDOUDOU)
+            hitdoudou();
+        else if (cChioce==CRY)
+            cry();
+        else if (cChioce==WITHDRAW)
+            break;
+        else
+        {
+            printf("\007ѡ�����\n");
+        }
+    }
+    return 0;
+}
+
+char getChoice()
+{
+    char c;
+    printf("\n ********************\n");
+    printf(" *  1. �Է�         *\n");
+    printf(" *  2. ˯��         *\n");
+    printf(" *  3. �򶹶�       *\n");
+    printf(" *  4. �Ҷ���Nɪ   *\n");
+    printf(" *  0. �˳�         *\n");
+    printf(" ********************\n");
+    printf(" ��ѡ��0-4����");
+    fflush(stdin);
+    scanf("%c", &c);
+    return c;
+//    system("cls");
+}
+
+void eat()
+{
+    system("cls");
+   int i=0,j=0,k=0;//�Ͻ�����ѭ�����
+   printf("\n\n\n\n\n\n �Ե���%d����\n\n\n\n\n\n",n);
+   n++;
+        for(i=0;i<60;i++)
+        {
+            printf("��");
+            for(j=0;j<1000;j++)
+                for(k=0;k<1000;k++);
+        }
+//        system("pause");
+//        system("cls");
+}
+void sleep()
+{
+    system("cls");
+    printf("\n\n\n\n\n\n ˯��%d��\n\n\n\n\n\n",m);
+    m++;
+    int i=0,j=0,k=0;//�Ͻ�����ѭ�����
+        for(i=0;i<60;i++)
+        {
+            printf("��");
+            for(j=0;j<1000;j++)
+                for(k=0;k<1000;k++);
+        }
+//        system("pause");
+//        system("cls");
+}
+void hitdoudou()
+{
+    system("cls");
+    printf("\n\n\n\n\n\n ��%d�δ򶹶�\n\n\n\n\n\n",l);
+    l++;
+    int i=0,j=0,k=0;//�Ͻ�����ѭ�����
+        for(i=0;i<60;i++)
+        {
+            printf("��");
+            for(j=0;j<1000;j++)
+                for(k=0;k<1000;k++);
+        }
+//        system("pause");
+//        system("cls");
+}
+void cry()
+{
+    system("cls");
+    printf("\n\n\n\n\n\n ��%d�؇Nɪ����! ��Ҷ�����ͷӲ������������......\n\n\n\n\n\n\n",p);
+    p++;
+    int i=0,j=0,k=0;//�Ͻ�����ѭ�����
+        for(i=0;i<60;i++)
+        {
+            printf("��");
+            for(j=0;j<1000;j++)
+                for(k=0;k<1000;k++);
+        }
+//        system("pause");
+//        system("cls");
+}
